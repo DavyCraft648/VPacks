@@ -31,7 +31,7 @@ class Modification implements JsonSerializable {
     public array|IResolvable|null $value = null;
 
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): object {
         return JsonSerializer::nonNullableOf($this);
     }
 }

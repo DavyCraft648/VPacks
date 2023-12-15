@@ -66,7 +66,7 @@ abstract class Element implements JsonSerializable, IElementContainer {
         return $this;
     }
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): mixed {
         return array_merge(['type' => $this->type], $this->properties);
     }
 

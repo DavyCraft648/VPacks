@@ -56,7 +56,7 @@ class ExtendsElement extends Element {
 
     public function getEmbeddingName(): string { return "$this->name@$this->extends"; }
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): object {
         return JsonSerializer::asObject($this->properties); //Avoid 'type' property
     }
 }

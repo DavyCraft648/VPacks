@@ -75,7 +75,7 @@ class DataBinding implements JsonSerializable {
     public bool|IResolvable|null $resolve_sibling_scope = null; // ???
 
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): object {
         return JsonSerializer::nonNullableOf($this);
     }
 }

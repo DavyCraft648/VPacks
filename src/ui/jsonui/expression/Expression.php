@@ -12,5 +12,5 @@ class Expression implements IResolvable {
 
     public function getName(): string { return $this->rawJsonUiExpr; }
 
-    public function jsonSerialize() { return $this->rawJsonUiExpr; }
+    public function jsonSerialize(): string { return $this->rawJsonUiExpr; }
 }

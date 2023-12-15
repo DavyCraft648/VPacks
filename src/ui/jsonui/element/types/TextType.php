@@ -24,5 +24,5 @@ class TextType implements JsonSerializable {
         $this->_delegated__construct(strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $type)));
     }
 
-    public function jsonSerialize() { return $this->type; }
+    public function jsonSerialize(): string { return $this->type; }
 }

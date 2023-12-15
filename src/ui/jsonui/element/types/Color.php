@@ -48,7 +48,7 @@ class Color implements JsonSerializable {
         return $this->a === null ? $this : new self($this->r, $this->g, $this->b);
     }
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): array {
         $data = [$this->r, $this->g, $this->b];
         if ($this->a !== null) {
             $data[] = $this->a;

@@ -20,7 +20,7 @@ class TextAlignment implements JsonSerializable {
         self::register(new self("center"));
     }
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): string {
         return $this->name();
     }
 }

@@ -34,7 +34,7 @@ class Animation implements JsonSerializable {
     public bool|IResolvable|null $scale_from_starting_alpha = null; // ???
     public bool|IResolvable|null $activated = null; // ???
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): object {
         return JsonSerializer::nonNullableOf($this);
     }
 }

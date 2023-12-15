@@ -34,7 +34,7 @@ class ButtonMapping implements JsonSerializable {
     public bool|IResolvable|null $button_up_right_of_first_refusal = null; // ???
 
 
-    public function jsonSerialize() {
+    public function jsonSerialize(): object {
         return JsonSerializer::nonNullableOf($this);
     }
 }
