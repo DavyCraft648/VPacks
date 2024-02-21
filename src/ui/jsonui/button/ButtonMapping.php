@@ -14,7 +14,7 @@ class ButtonMapping implements JsonSerializable {
 
     public static function global(string $from, string $to): ButtonMapping {
         $mapping = new self();
-        $mapping->mapping_type = MappingType::GLOBAL();
+        $mapping->mapping_type = MappingType::GLOBAL;
         $mapping->from_button_id = $from;
         $mapping->to_button_id = $to;
 
@@ -34,7 +34,7 @@ class ButtonMapping implements JsonSerializable {
     public bool|IResolvable|null $button_up_right_of_first_refusal = null; // ???
 
 
-    public function jsonSerialize(): object {
+    public function jsonSerialize(): mixed {
         return JsonSerializer::nonNullableOf($this);
     }
 }

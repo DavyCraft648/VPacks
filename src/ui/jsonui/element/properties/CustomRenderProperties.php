@@ -26,7 +26,7 @@ trait CustomRenderProperties {
      */
     public function gradientDirection(Orientation|IResolvable $orientation): static { return $this->prop('gradient_direction', $orientation); }
 
-    public function getGradientDirection(): Orientation|IResolvable { return $this->getProp('gradient_direction', Orientation::NONE()); }
+    public function getGradientDirection(): Orientation|IResolvable { return $this->getProp('gradient_direction', Orientation::NONE); }
 
     /**
      * color1: ???
@@ -130,7 +130,7 @@ trait CustomRenderProperties {
      */
     public function rotation(Rotation|IResolvable $rotation): static { return $this->prop('rotation', $rotation); }
 
-    public function getRotation(): Rotation|IResolvable { return $this->getProp('rotation', Rotation::AUTO()); }
+    public function getRotation(): Rotation|IResolvable { return $this->getProp('rotation', Rotation::AUTO); }
 
     /**
      * end_event: ???

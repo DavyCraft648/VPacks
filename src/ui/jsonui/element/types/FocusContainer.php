@@ -16,7 +16,7 @@ class FocusContainer implements JsonSerializable {
     public string|IResolvable|null $other_focus_container_name = null; // Name of the UI control that will receive focus when on button.menu_left, button.menu_right, button.menu_up or button.menu_down
     public string|IResolvable|null $focus_id_Inside = null; // Identifier (focus_identifier) of the focusable child control of the other_focus_container_name that will recieve the focus
 
-    public function jsonSerialize(): array {
+    public function jsonSerialize(): object {
         return JsonSerializer::nonNullableOf($this);
     }
 }

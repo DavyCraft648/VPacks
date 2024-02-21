@@ -47,7 +47,7 @@ trait TextEditProperties {
      */
     public function textType(TextType|IResolvable $val): static { return $this->prop('text_type', $val); }
 
-    public function getTextType(): TextType|IResolvable { return $this->getProp('text_type', TextType::EXTENDED_ASCII()); }
+    public function getTextType(): TextType|IResolvable { return $this->getProp('text_type', TextType::EXTENDED_ASCII); }
 
     /**
      * max_length: Maximum number of characters allow in the text field

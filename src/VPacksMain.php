@@ -4,7 +4,6 @@ namespace vezdehod\packs;
 
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginBase;
-use ReflectionClass;
 use vezdehod\packs\pack\ResourcePackGenerator;
 use vezdehod\packs\resource\ResourceManager;
 use vezdehod\packs\ui\UIManager;
@@ -12,7 +11,6 @@ use vezdehod\packs\utils\JsonSerializer;
 use function is_dir;
 use function ksort;
 use function str_ends_with;
-use function strtolower;
 
 class VPacksMain extends PluginBase {
 
@@ -49,23 +47,11 @@ class VPacksMain extends PluginBase {
         $pack = $generator->generate();
 
         $manager = $this->getServer()->getResourcePackManager();
-        $reflection = new ReflectionClass($manager);
 
-        $packsProperty = $reflection->getProperty("resourcePacks");
-        $packsProperty->setAccessible(true);
-        $currentResourcePacks = $packsProperty->getValue($manager);
+        $currentResourcePacks = $manager->getResourceStack();
+		$currentResourcePacks[] = $pack;
+		$manager->setResourceStack($currentResourcePacks);
 
-        $uuidProperty = $reflection->getProperty("uuidList");
-        $uuidProperty->setAccessible(true);
-        $currentUUIDPacks = $uuidProperty->getValue($manager);
-
-        $property = $reflection->getProperty("serverForceResources");
-        $property->setAccessible(true);
-        $property->setValue($manager, true);
-
-        $currentUUIDPacks[strtolower($pack->getPackId())] = $currentResourcePacks[] = $pack;
-
-        $packsProperty->setValue($manager, $currentResourcePacks);
-        $uuidProperty->setValue($manager, $currentUUIDPacks);
+        $manager->setResourcePacksRequired(true);
     }
 }

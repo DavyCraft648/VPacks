@@ -5,14 +5,13 @@ namespace vezdehod\packs\ui\jsonui\element\types;
 use JsonSerializable;
 use vezdehod\packs\utils\JsonEnumTrait;
 
-/**
- * @method static FocusChange FOCUS_OVERRIDE_STOP()
- */
-class FocusChange implements JsonSerializable {
+enum FocusChange implements JsonSerializable {
 
     use JsonEnumTrait;
-    
-    protected static function setup(): void {
-        self::register(new self("FOCUS_OVERRIDE_STOP"));
-    }
+
+	case FOCUS_OVERRIDE_STOP;
+
+	public function name(): string {
+		return "FOCUS_OVERRIDE_STOP";
+	}
 }

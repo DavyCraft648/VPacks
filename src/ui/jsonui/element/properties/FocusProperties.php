@@ -58,7 +58,7 @@ trait FocusProperties {
      */
     public function focusChangeDown(string|FocusChange|IResolvable $id): static { return $this->prop('focus_change_down', $id); }
 
-    public function getFocusChangeDown(): string|FocusChange|IResolvable { return $this->getProp('focus_change_down', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusChangeDown(): string|FocusChange|IResolvable { return $this->getProp('focus_change_down', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_change_up: Identifier (focus_identifier) of the focusable element that will recieve focus when on button.menu_up. If you want to prevent the focus to escape from the top use FOCUS_OVERRIDE_STOP
@@ -66,7 +66,7 @@ trait FocusProperties {
      */
     public function focusChangeUp(string|FocusChange|IResolvable $id): static { return $this->prop('focus_change_up', $id); }
 
-    public function getFocusChangeUp(): string|FocusChange|IResolvable { return $this->getProp('focus_change_up', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusChangeUp(): string|FocusChange|IResolvable { return $this->getProp('focus_change_up', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_change_left: Identifier (focus_identifier) of the focusable element that will recieve focus when on button.menu_left. If you want to prevent the focus to escape from the left use FOCUS_OVERRIDE_STOP
@@ -74,7 +74,7 @@ trait FocusProperties {
      */
     public function focusChangeLeft(string|FocusChange|IResolvable $id): static { return $this->prop('focus_change_left', $id); }
 
-    public function getFocusChangeLeft(): string|FocusChange|IResolvable { return $this->getProp('focus_change_left', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusChangeLeft(): string|FocusChange|IResolvable { return $this->getProp('focus_change_left', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_change_right: Identifier (focus_identifier) of the focusable element that will recieve focus when on button.menu_right. If you want to prevent the focus to escape from the right use FOCUS_OVERRIDE_STOP
@@ -82,7 +82,7 @@ trait FocusProperties {
      */
     public function focusChangeRight(string|FocusChange|IResolvable $id): static { return $this->prop('focus_change_right', $id); }
 
-    public function getFocusChangeRight(): string|FocusChange|IResolvable { return $this->getProp('focus_change_right', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusChangeRight(): string|FocusChange|IResolvable { return $this->getProp('focus_change_right', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_mapping: ???
@@ -120,7 +120,7 @@ trait FocusProperties {
      */
     public function focusNavigationModeLeft(FocusNavigationMode|IResolvable $mode): static { return $this->prop('focus_navigation_mode_left', $mode); }
 
-    public function getFocusNavigationModeLeft(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_left', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusNavigationModeLeft(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_left', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_navigation_mode_right: ???
@@ -128,7 +128,7 @@ trait FocusProperties {
      */
     public function focusNavigationModeRight(FocusNavigationMode|IResolvable $mode): static { return $this->prop('focus_navigation_mode_right', $mode); }
 
-    public function getFocusNavigationModeRight(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_right', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusNavigationModeRight(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_right', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_navigation_mode_down: ???
@@ -136,7 +136,7 @@ trait FocusProperties {
      */
     public function focusNavigationModeDown(FocusNavigationMode|IResolvable $mode): static { return $this->prop('focus_navigation_mode_down', $mode); }
 
-    public function getFocusNavigationModeDown(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_down', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusNavigationModeDown(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_down', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_navigation_mode_up: ???
@@ -144,7 +144,7 @@ trait FocusProperties {
      */
     public function focusNavigationModeUp(FocusNavigationMode|IResolvable $mode): static { return $this->prop('focus_navigation_mode_up', $mode); }
 
-    public function getFocusNavigationModeUp(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_up', FocusChange::FOCUS_OVERRIDE_STOP()); }
+    public function getFocusNavigationModeUp(): FocusNavigationMode|IResolvable { return $this->getProp('focus_navigation_mode_up', FocusChange::FOCUS_OVERRIDE_STOP); }
 
     /**
      * focus_container_custom_left: ???

@@ -29,7 +29,7 @@ class DataBinding implements JsonSerializable {
 
     public static function viewRebind(IResolvable $source, IResolvable $target): DataBinding {
         $binding = self::rebind($source, $target);
-        $binding->binding_type = BindingType::VIEW();
+        $binding->binding_type = BindingType::VIEW;
         return $binding;
     }
 
@@ -49,14 +49,14 @@ class DataBinding implements JsonSerializable {
 
     public static function overrideFromCollection(Collection $collection, Binding $source, Binding $override): DataBinding {
         $binding = self::override($source, $override);
-        $binding->binding_type = BindingType::COLLECTION();
+        $binding->binding_type = BindingType::COLLECTION;
         $binding->binding_collection_name = $collection;
         return $binding;
     }
 
     public static function collectionDetails(Collection $collection): DataBinding {
         $binding = new self();
-        $binding->binding_type = BindingType::COLLECTION_DETAILS();
+        $binding->binding_type = BindingType::COLLECTION_DETAILS;
         $binding->binding_collection_name = $collection;
 
         return $binding;
@@ -75,7 +75,7 @@ class DataBinding implements JsonSerializable {
     public bool|IResolvable|null $resolve_sibling_scope = null; // ???
 
 
-    public function jsonSerialize(): object {
+    public function jsonSerialize(): mixed {
         return JsonSerializer::nonNullableOf($this);
     }
 }

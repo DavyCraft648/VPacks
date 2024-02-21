@@ -87,7 +87,7 @@ trait TextProperties {
      */
     public function fontSize(FontSize|IResolvable $fontSize): static { return $this->prop('font_size', $fontSize); }
 
-    public function getFontSize(): FontSize|IResolvable { return $this->getProp('font_size', FontSize::NORMAL()); }
+    public function getFontSize(): FontSize|IResolvable { return $this->getProp('font_size', FontSize::NORMAL); }
 
     /**
      * font_scale_factor: Scale of the text
@@ -119,7 +119,7 @@ trait TextProperties {
      */
     public function fontType(FontType|IResolvable $font): static { return $this->prop('font_type', $font); }
 
-    public function getFontType(): FontType|IResolvable { return $this->getProp('font_type', FontType::DEFAULT()); }
+    public function getFontType(): FontType|IResolvable { return $this->getProp('font_type', FontType::DEFAULT); }
 
     /**
      * backup_font_type: Font used if font_type didn't work
@@ -127,7 +127,7 @@ trait TextProperties {
      */
     public function backupFontType(FontType|IResolvable $font): static { return $this->prop('backup_font_type', $font); }
 
-    public function getBackupFontType(): FontType|IResolvable { return $this->getProp('backup_font_type', FontType::DEFAULT()); }
+    public function getBackupFontType(): FontType|IResolvable { return $this->getProp('backup_font_type', FontType::DEFAULT); }
 
     /**
      * text_alignment: Text alignment direction. If it's not defined it will adjust automatically based on anchor_from and anchor_to
@@ -135,5 +135,5 @@ trait TextProperties {
      */
     public function textAlignment(TextAlignment|IResolvable $alignment): static { return $this->prop('text_alignment', $alignment); }
 
-    public function getTextAlignment(): TextAlignment|IResolvable { return $this->getProp('text_alignment', TextAlignment::CENTER()); }
+    public function getTextAlignment(): TextAlignment|IResolvable { return $this->getProp('text_alignment', TextAlignment::CENTER); }
 }

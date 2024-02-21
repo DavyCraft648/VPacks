@@ -69,7 +69,7 @@ trait SpriteProperties {
      */
     public function tiled(Tiled|IResolvable $scale): static { return $this->prop('tiled', $scale); }
 
-    public function getTiled(): Tiled|IResolvable { return $this->getProp('tiled', Tiled::FALSE()); }
+    public function getTiled(): Tiled|IResolvable { return $this->getProp('tiled', Tiled::FALSE); }
 
     /**
      * tiled_scale: Scale of the tile textures
@@ -85,7 +85,7 @@ trait SpriteProperties {
      */
     public function clipDirection(ClipDirection|IResolvable $direction): static { return $this->prop('clip_direction', $direction); }
 
-    public function getClipDirection(): ClipDirection|IResolvable { return $this->getProp('clip_direction', ClipDirection::CENTER()); }
+    public function getClipDirection(): ClipDirection|IResolvable { return $this->getProp('clip_direction', ClipDirection::CENTER); }
 
     /**
      * clip_ratio: How much to clip. From 0.0 to 1.0

@@ -17,7 +17,7 @@ class Focus implements JsonSerializable {
     public string|IResolvable|null $focus_change_up = null;
     public string|IResolvable|null $focus_change_down = null;
 
-    public function jsonSerialize(): array {
+    public function jsonSerialize(): object {
         return JsonSerializer::nonNullableOf($this);
     }
 }

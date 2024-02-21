@@ -45,7 +45,7 @@ trait SliderProperties {
      * slider_direction: Orientation of the slider movement.
      * default: ???
      */
-    public function sliderDirection(Orientation|IResolvable $val): static { return $this->prop('slider_direction', $val instanceof Orientation ? $val->or(Orientation::VERTICAL()) : $val); }
+    public function sliderDirection(Orientation|IResolvable $val): static { return $this->prop('slider_direction', $val instanceof Orientation ? $val->or(Orientation::VERTICAL) : $val); }
 
     public function getSliderDirection(): Orientation|IResolvable { return $this->getProp('slider_direction', ""); }
 

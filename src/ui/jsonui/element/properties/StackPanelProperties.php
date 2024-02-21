@@ -12,7 +12,7 @@ trait StackPanelProperties {
      * orientation: Direction the elements stack inside stack_panel.
      * default: vertical
      */
-    public function orientation(Orientation|IResolvable $orientation): static { return $this->prop('orientation', $orientation instanceof Orientation ? $orientation->or(Orientation::VERTICAL()) : $orientation); }
+    public function orientation(Orientation|IResolvable $orientation): static { return $this->prop('orientation', $orientation instanceof Orientation ? $orientation->or(Orientation::VERTICAL) : $orientation); }
 
-    public function getOrientation(): Orientation|IResolvable { return $this->getProp('orientation', Orientation::VERTICAL()); }
+    public function getOrientation(): Orientation|IResolvable { return $this->getProp('orientation', Orientation::VERTICAL); }
 }

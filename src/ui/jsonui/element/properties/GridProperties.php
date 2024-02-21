@@ -40,7 +40,7 @@ trait GridProperties {
      */
     public function gridRescalingType(Orientation|IResolvable $orientation): static { return $this->prop('grid_rescaling_type', $orientation); }
 
-    public function getGridRescalingType(): Orientation|IResolvable { return $this->getProp('grid_rescaling_type', Orientation::NONE()); }
+    public function getGridRescalingType(): Orientation|IResolvable { return $this->getProp('grid_rescaling_type', Orientation::NONE); }
 
     /**
      * grid_fill_direction: ???
@@ -48,7 +48,7 @@ trait GridProperties {
      */
     public function gridFillDirection(Orientation|IResolvable $orientation): static { return $this->prop('grid_fill_direction', $orientation); }
 
-    public function getGridFillDirection(): Orientation|IResolvable { return $this->getProp('grid_fill_direction', Orientation::NONE()); }
+    public function getGridFillDirection(): Orientation|IResolvable { return $this->getProp('grid_fill_direction', Orientation::NONE); }
 
     /**
      * grid_item_template: An element capable of handling collections (e.g. "common.container_item", "container_items", "inventory_items" and etc.)
@@ -56,7 +56,7 @@ trait GridProperties {
      */
     public function gridItemTemplate(string|IResolvable $template): static { return $this->prop('grid_item_template', $template); }
 
-    public function getGridItemTemplate(): string|IResolvable { return $this->getProp('grid_item_template', Orientation::NONE()); }
+    public function getGridItemTemplate(): string|IResolvable { return $this->getProp('grid_item_template', Orientation::NONE); }
 
     /**
      * precached_grid_item_count: ???

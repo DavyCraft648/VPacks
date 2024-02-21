@@ -53,7 +53,7 @@ trait LayoutProperties {
      */
     public function anchorFrom(Anchor|IResolvable $anchor): static { return $this->prop('anchor_from', $anchor); }
 
-    public function getAnchorFrom(): Anchor|IResolvable { return $this->getProp('anchor_from', Anchor::CENTER()); }
+    public function getAnchorFrom(): Anchor|IResolvable { return $this->getProp('anchor_from', Anchor::CENTER); }
 
     /**
      * anchor_to: Anchor point in the element.
@@ -62,7 +62,7 @@ trait LayoutProperties {
      */
     public function anchorTo(Anchor|IResolvable $anchor): static { return $this->prop('anchor_to', $anchor); }
 
-    public function getAnchorTo(): Anchor|IResolvable { return $this->getProp('anchor_to', Anchor::CENTER()); }
+    public function getAnchorTo(): Anchor|IResolvable { return $this->getProp('anchor_to', Anchor::CENTER); }
 
     /**
      * helper-method that set both anchor_to and anchor_from to same {@see Anchor}

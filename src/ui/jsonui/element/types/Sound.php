@@ -18,7 +18,7 @@ class Sound implements JsonSerializable {
     public float|IResolvable|null $sound_pitch = null; // Pitch of the sound
     public float|IResolvable|null $min_seconds_between_plays = null; // Array of the sounds to play when the pressed event is fired
 
-    public function jsonSerialize(): array {
+    public function jsonSerialize(): object {
         return JsonSerializer::nonNullableOf($this);
     }
 }
